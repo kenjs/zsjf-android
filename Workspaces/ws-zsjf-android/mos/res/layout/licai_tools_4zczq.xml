@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/bizhong"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="20dp"
+        bgImage="@drawable/dev_line_select_bg"
+        label="@string/bizhong"
+        android:paddingLeft="10.0dip" 
+        hasStar="@string/star"/>
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/csckje"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bizhong" 
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/csckje"
+        hasStar="@string/star"
+        android:paddingLeft="10.0dip" />
+    
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/ckqx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/csckje" 
+        bgImage="@drawable/dev_line_select_bg"
+        label="@string/cscrrq"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/nlv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ckqx" 
+      	bgImage="@drawable/dev_line_bg_common"
+        label="@string/nly"
+        android:paddingLeft="10.0dip"
+        hasStar="@string/star" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/sdlxje"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nlv" 
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/sdlxje"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/lxsje"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sdlxje" 
+       bgImage="@drawable/dev_line_bg_common"
+        label="@string/lxsje"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/bxhj"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lxsje" 
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/bxhj"
+        android:paddingLeft="10.0dip" />
+
+
+</RelativeLayout>

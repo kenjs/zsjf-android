@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+      <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_zhongliang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/line_bg"
+        label="@string/device_zhongliang"
+        android:layout_marginTop="20dip"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_canshu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_zhongliang"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_select_bottom_bg"
+        label="@string/device_canshu"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_zhidaoshang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_canshu"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dip"
+        bgImage="@drawable/line_bg_title"
+        label="@string/device_zhidaoshang"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_zhidaoshang"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+       	bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_address"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_lianxi_ren"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_address"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+       	bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_lianxi_ren"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_lianxi_fangshi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_lianxi_ren"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_bottom"
+        label="@string/device_lianxi_fangshi"
+        android:paddingLeft="10.0dip" />
+    
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_shigongdanwei"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+       	bgImage="@drawable/line_bg_title"
+        android:layout_marginTop="20dip"
+        android:layout_below="@+id/device_lianxi_fangshi" 
+        label="@string/device_shigongdanwei"
+        android:paddingLeft="10.0dip" />
+    
+    
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_anzhuang_riqi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_shigongdanwei"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        label="@string/device_anzhuang_riqi"
+        bgImage="@drawable/bg_dev_line_date"
+       
+        android:paddingLeft="10.0dip" />
+    
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_address2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_anzhuang_riqi"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_address2"
+        android:paddingLeft="10.0dip" />
+    
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_lianxiren2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_address2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+       	bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_lianxiren2"
+        android:paddingLeft="10.0dip" />
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginBottom="10dip"
+         >
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_reset"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_next"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/common_page_bg_1"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/recorder_file_size"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/recorder_file_size"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+	    />
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/recorder_file_time_long"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/recorder_file_time_long"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/recorder_file_size"
+	    />
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/recorder_custom_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/recorder_custom_name"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/recorder_file_time_long"
+	    />
+	
+	
+	<TextView  
+	     android:id="@+id/recorder_filename_tip"
+	     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="文件名称格式：客户手机号(身份证号或客户号)-创建时间-设备编号-UUID"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="8dip"
+		 android:layout_below="@+id/recorder_custom_name"    
+	    />
+	
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/recorder_filename"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/recorder_filename"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/recorder_filename_tip"
+	    />
+	
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/recorder_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/recorder_remark"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/recorder_filename"
+	    />
+	
+	<Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/btn_common"
+        android:textColor="#FFFFFFFF" 
+        android:layout_centerHorizontal="true"
+        android:text="@string/save"
+        android:layout_below="@+id/recorder_remark"
+        android:textSize="17dip" />
+	
+	
+	 
+</RelativeLayout>

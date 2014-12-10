@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:umadsdk="http://schemas.android.com/apk/res/com.LoveBus"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     android:background="@drawable/background"
+    >
+    
+   <RelativeLayout 
+        android:id="@+id/report_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+        >
+  <LinearLayout
+        android:id="@+id/report_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/report_title_bg" >
+
+<!--  列表图-->
+        <TextView
+            android:id="@+id/report_title_layout_title1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="列表图"
+             android:textColor="#ca202b"
+            android:textSize="16.0dip" 
+            android:padding="5dip"
+            />
+        <TextView
+            android:id="@+id/report_title_layout_title2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="饼状图"
+            android:textColor="#000000"
+            android:textSize="16.0dip" 
+              android:padding="5dip"
+            />
+    </LinearLayout>
+  
+     <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/report_curor" 
+        android:layout_alignBottom="@+id/report_title_layout"
+        />
+     
+     </RelativeLayout>
+    <!-- 左右滚动控件 总体布局文件 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+         android:background="@drawable/background"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" 
+        />
+</LinearLayout>

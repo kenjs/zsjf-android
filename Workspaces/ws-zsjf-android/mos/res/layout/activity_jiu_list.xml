@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="@drawable/background" >
+     <RelativeLayout
+        android:id="@+id/all_task_list_item_img0"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hot_select" >
+        <TextView
+            android:id="@+id/tv_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="销量"
+            android:layout_marginLeft="32dip"
+            android:textColor="#0761B7"
+            android:textSize="17dip" />
+        <TextView
+             android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="价格"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32dip"
+            android:textColor="#000000"
+            android:textSize="17dip" />
+        <TextView
+            android:id="@+id/tv_renqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="人气"
+            android:layout_marginRight="35dip"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textSize="17dip" />
+        
+     </RelativeLayout>
+    
+    <com.cattsoft.mos.widget.PullToRefreshListView
+        android:id="@+id/wine_list"
+        android:layout_below="@+id/all_task_list_item_img0"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+		android:dividerHeight="8dp"
+        android:layout_width="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:fadeScrollbars="true"/>
+
+</RelativeLayout>
