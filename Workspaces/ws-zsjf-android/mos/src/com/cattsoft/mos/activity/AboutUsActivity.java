@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.cattsoft.mos.R;
 
 public class AboutUsActivity extends BasicActivity{
-
+  
 	private TextView versionText;
 	String versionName;
 	public void onCreate(Bundle savedInstanceState) {
