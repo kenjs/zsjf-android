@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/common_page_bg_1"
+     >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+<!-- 
+        <com.cattsoft.mos.view.TextViewWithImage
+            android:id="@+id/prod_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            image="@drawable/test"
+            android:layout_marginLeft="15dip"
+            label="@string/chanpin_aname"
+          />
+
+        <com.cattsoft.mos.view.TextViewWithImage
+            android:id="@+id/is_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/prod_name"
+            label="@string/sale_astatus"  />
+
+        <com.cattsoft.mos.view.TextViewWithImage
+            android:id="@+id/souyilv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/is_sale"
+            android:layout_marginLeft="20dip"
+            image="@drawable/test"
+            label="@string/ashouyilv" />
+
+        <com.cattsoft.mos.view.TextViewWithImage
+            android:id="@+id/prod_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp" 
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            label="@string/pro_term_avalue" /> -->
+    </RelativeLayout>
+
+    <com.cattsoft.mos.widget.PullToRefreshListView
+        android:id="@+id/prodList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:layout_below="@+id/layout_title"
+         android:divider="@null"
+        android:fadeScrollbars="true" />
+
+    <Button
+        android:id="@+id/licai_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prodList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/login_btn"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip" />
+
+</RelativeLayout>

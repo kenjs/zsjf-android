@@ -225,14 +225,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.RecorderTrackActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".activity.RecorderSaveActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+       
         <activity
             android:name=".activity.ZiXunDetailActivity"
             android:parentActivityName=".activity.ZiXunListActivity"
@@ -253,10 +246,7 @@
             android:name=".activity.MCamera"
             android:screenOrientation="landscape" >
         </activity>
-        <activity
-            android:name=".activity.RecorderListActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+       
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait" >
@@ -423,9 +413,7 @@
         </activity>
         
 
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="zM2NBQzQ9gvNfLO0NP4uDBhN" />
+       
     </application>
 
 </manifest>

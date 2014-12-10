@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:layout_marginTop="15dip"
+    android:background="@drawable/wine_list_item_frame"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/all_task_list_item_img0"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/zixun_list_item_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="10dip"
+            android:contentDescription=""
+            android:src="@drawable/home_ptj" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/all_task_list_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@+id/all_task_list_item_img0" >
+
+        <TextView
+            android:id="@+id/zixun_list_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingRight="50dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="法国原装进口红酒瑞纳伯爵干红葡萄酒750ml"
+            android:textColor="#FF000000"
+            android:textSize="17dip" />
+
+        <TextView
+            android:id="@+id/juli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="200m"
+            android:textColor="#FF979797"
+            android:textSize="17dip" />
+
+        <TextView
+            android:id="@+id/zixun_list_item_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zixun_list_item_title"
+            android:layout_marginTop="1dip"
+            android:gravity="left"
+            android:lineSpacingExtra="3dip"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:text="爱之湾+蓝贵人组合装送2香槟杯2红色拎袋"
+            android:textColor="#FD8688"
+            android:textSize="16dip" />
+
+        <ImageView
+            android:id="@+id/img_tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/zixun_list_item_desc"
+            android:layout_below="@+id/zixun_list_item_desc"
+            android:contentDescription=""
+            android:paddingLeft="5dip"
+            android:src="@drawable/tip1" />
+
+        <ImageView
+            android:id="@+id/img_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zixun_list_item_desc"
+            android:layout_marginLeft="8dip"
+            android:layout_toRightOf="@+id/img_tip1"
+            android:contentDescription=""
+            android:src="@drawable/tip2" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/zixun_list_item_desc"
+            android:gravity="left"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="5dip"
+            android:paddingTop="2dp"
+            android:singleLine="false"
+            android:text="200元"
+            android:textColor="#FFFD8688"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

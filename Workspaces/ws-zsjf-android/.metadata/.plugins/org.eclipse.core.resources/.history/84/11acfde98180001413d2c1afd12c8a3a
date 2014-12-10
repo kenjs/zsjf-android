@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_bianhao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        bgImage="@drawable/line_bg_title"
+        label="@string/device_bianhao"
+        android:paddingLeft="10.0dip" 
+        hasStar="@string/star"/>
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_yzzcdm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_bianhao"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_yzzcdm"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_yzzcdm"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+      bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_name"
+        android:paddingLeft="10.0dip"
+        hasStar="@string/star" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_english_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_english_name"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_use_dept"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_english_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        label="@string/device_use_dept"
+        bgImage="@drawable/dev_line_select_bg"
+        android:paddingLeft="10.0dip" 
+        hasStar="@string/star"/>
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_install_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_use_dept"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_install_address"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_mode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_install_address"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+       bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_mode"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.EditLabelText
+        android:id="@+id/device_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_mode"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        bgImage="@drawable/dev_line_bg_common"
+        label="@string/device_count"
+        android:paddingLeft="10.0dip" />
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_unit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_count"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" 
+        label="@string/device_unit"
+        android:paddingLeft="10.0dip" 
+          bgImage="@drawable/dev_line_select_bg"/>
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_belongs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_unit"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" 
+        label="@string/device_belongs"
+        android:paddingLeft="10.0dip" 
+           bgImage="@drawable/dev_line_select_bg"/>
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/device_prod_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/device_belongs"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" 
+        label="@string/device_prod_date"
+        android:paddingLeft="10.0dip"
+        bgImage="@drawable/bg_dev_line_date" />
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip" >
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_reset"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_next"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

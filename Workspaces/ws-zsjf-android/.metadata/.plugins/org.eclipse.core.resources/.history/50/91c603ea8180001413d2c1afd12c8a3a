@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFAF3"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/bulletin_list_item1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dip"
+            android:paddingLeft="5dip"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:text="文件名称"
+            android:textColor="#3d3d3d"
+            android:textSize="22dip" />
+
+
+        <TextView
+            android:id="@+id/customName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          	 android:layout_marginLeft="8dip"
+            android:paddingLeft="5dip"
+            android:layout_below="@+id/fileName"
+            android:text="客户姓名"
+            android:textColor="#858585"
+            android:textSize="18dip" />
+        
+        <TextView
+            android:id="@+id/fileType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_below="@+id/fileName"
+            android:layout_toRightOf="@+id/customName"
+            android:text="文件类型"
+            android:textColor="#858585"
+            android:textSize="18dip" />
+        
+        <TextView
+            android:id="@+id/uploaded"
+            android:layout_width="0dip"
+            android:layout_height="0dip" 
+            android:layout_toRightOf="@+id/fileType"
+            android:layout_below="@+id/fileName"
+            android:text="未上传"
+            android:textColor="#A64361"
+            android:textSize="18dip"
+            android:layout_marginLeft="8dip"
+            />
+        
+         <TextView
+            android:id="@+id/timeLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customName"
+            android:layout_marginLeft="8dip"
+            android:paddingLeft="5dip"
+            android:text="时长"
+            android:textColor="#858585"
+            android:textSize="18dip" />
+        
+        
+ <TextView
+            android:id="@+id/createTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:paddingLeft="5dip"
+            android:layout_below="@+id/customName"
+            android:layout_toRightOf="@+id/timeLong"
+            android:text="创建时间"
+            android:textColor="#858585"
+            android:textSize="18dip" /> 
+
+        <TextView
+            android:id="@+id/fileSize"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_below="@+id/customName"
+            android:layout_toRightOf="@+id/createTime"
+            android:text="文件大小" />
+
+       
+
+        <TextView
+            android:id="@+id/remarked"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_below="@+id/fileName" />
+        
+        
+        
+        
+      <!-- <Button  android:id="@+id/btn_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            /> -->
+    </RelativeLayout>
+
+
+</RelativeLayout>

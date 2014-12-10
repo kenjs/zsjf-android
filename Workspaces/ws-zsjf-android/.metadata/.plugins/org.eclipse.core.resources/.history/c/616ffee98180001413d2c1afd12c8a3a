@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_dialog_selct"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#CCCCCC"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_select_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select_title"
+        android:gravity="center"
+        android:text="@string/username_label"
+        android:textColor="#FF000000"
+        android:textSize="20.0dip" />
+
+    <ScrollView
+        android:id="@+id/select_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_dialog_selct2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CCCCCC"
+            android:orientation="vertical" >
+        </LinearLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@drawable/common_page_bg_1" >
+
+    <com.cattsoft.mos.view.SelectLabelText
+        android:id="@+id/cunkuan_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        label="@string/cunkuan_type"
+        android:layout_marginTop="5dip"
+        bgImage="@drawable/dev_line_select_bg"
+        android:paddingLeft="10.0dip" 
+        hasStar="@string/star"/>
+    
+    <RelativeLayout
+        android:id="@+id/js_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/cunkuan_type"
+        android:layout_centerInParent="true"
+         android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/btn_jisuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/js_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_common"
+        android:gravity="center"
+        android:text="计算"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip" />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="causes">
+        <item>超期特殊原因</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+    <string-array name="modes">
+        <item>转重配号</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+    <string-array name="localnet">
+        <item>本地网</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+    <string-array name="serarea">
+        <item>固阳</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+    <string-array name="company">
+        <item>固阳装机公司</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+    <string-array name="erros">
+        <item>常见错误</item>
+        <item>mac os</item>
+        <item>mac os1</item>
+    </string-array>
+
+    <!-- 工单处理详情底部菜单 -->
+
+    <string-array name="toolbar_name_array">
+        <item>"正常回单"</item>
+        <item>"失败回单"</item>
+ 
+	            <item>"转派"</item>
+  
+    	           <item>"呼叫"</item>
+          <item>"竣工 处理"</item>
+ </string-array>
+    <string-array name="toolbar_name_array0">
+        <item>"信息回填"</item>
+    </string-array>
+    <!-- 工单处理底部菜单 -->
+    <string-array name="work_order_handle_toolbar_name_array">
+        <item></item>
+        <!-- <item></item> -->
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    
+
+    <!-- 工单领取底部菜单 -->
+    <string-array name="work_order_receive_toolbar_name_array">
+        <item></item>
+        <!-- <item></item> -->
+<!--         <item></item> -->
+<!--         <item></item> -->
+    </string-array>
+
+</resources>

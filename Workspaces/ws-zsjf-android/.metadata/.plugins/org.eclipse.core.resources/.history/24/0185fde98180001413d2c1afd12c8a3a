@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/background"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3" 
+        android:columnWidth="230dp" 
+   		android:verticalSpacing="1dp" 
+    	android:horizontalSpacing="1dp" 
+    	android:stretchMode="columnWidth" 
+    	android:gravity="center" 
+    	android:visibility="gone"
+        >
+        
+    </GridView>
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/defect_zhegngaidanwei"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/defect_zhegngaidanwei"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/gridView1"
+	    />
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/defect_kaiyeqianhou"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/defect_kaiyeqianhou"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/defect_zhegngaidanwei"
+                bgImage="@drawable/select_input_bg2"
+	    />
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/defect_state"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/defect_state"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/defect_kaiyeqianhou"
+	    />
+	<!-- 
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/defect_audit_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/defect_audit_date"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/defect_state"
+                bgImage="@drawable/bg_defect_line_date"
+                hasStar="@string/star"
+	    />
+	    - -->
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/defect_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                label="@string/defect_remark"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/defect_state"
+	    />
+	 
+	<RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginBottom="10dip" >
+		
+	    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_reset"
+        android:textColor="#FFFFFFFF"
+        android:layout_alignParentLeft="true"
+        android:textSize="16dip" />
+	     
+	    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_next"
+        android:textColor="#FFFFFFFF"
+        android:layout_alignParentRight="true"
+        android:textSize="16dip" />
+	    
+	</RelativeLayout>
+	
+	 
+</RelativeLayout>

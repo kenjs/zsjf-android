@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/common_page_bg_1"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<com.cattsoft.mos.view.EditLabelText
+	    android:id="@+id/chanpin_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/chanpin_name"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+	    />
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/publish_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/publish_area"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/chanpin_name"
+                bgImage="@drawable/select_input_bg2"
+	    />
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/publish_org"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/publish_org"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/publish_area"
+               	bgImage="@drawable/select_input_bg2"
+	    />
+	
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/publish_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/publish_date"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/publish_org"
+                bgImage="@drawable/bg_defect_line_date"
+	    />
+	
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/shouyilv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/shouyilv"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/publish_date"
+	    />
+	
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/licai_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/licai_type"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/shouyilv"
+                bgImage="@drawable/select_input_bg2"
+	    />
+	
+	<com.cattsoft.mos.view.SelectLabelText
+	    android:id="@+id/sale_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                label="@string/sale_status"
+                android:paddingLeft="10.0dip" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/licai_type"
+                bgImage="@drawable/select_input_bg2"
+	    />
+	
+		<Button
+        android:id="@+id/btn_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/btn_common"
+        android:textColor="#FFFFFFFF" 
+        android:layout_centerHorizontal="true"
+        android:text="@string/query"
+        android:layout_below="@+id/sale_status"
+        android:textSize="17dip" />
+	
+	 
+</RelativeLayout>

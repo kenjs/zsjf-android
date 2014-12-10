@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+     >
+
+    <RelativeLayout
+		android:id="@+id/list_item_port"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dip"
+		android:layout_marginBottom="10dip">
+<TextView
+            android:id="@+id/port_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="12dip"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip"
+            android:textColor="#FF000000"
+            android:textSize="20dip" />
+
+
+    </RelativeLayout>
+  
+     
+
+
+<!--         <ImageView -->
+<!--         android:id="@+id/detail" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content"             -->
+<!--         android:layout_alignParentRight="true" -->
+<!--         android:paddingRight="8dip"  -->
+<!--         android:layout_marginTop ="23dip"       -->
+<!--         android:src="@drawable/scan_zoom_in" /> -->
+  
+
+</RelativeLayout>
+
+
+

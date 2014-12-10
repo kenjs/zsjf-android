@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+ 
+
+    <RelativeLayout
+        android:id="@+id/login_relative_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="30.0dip"
+        android:paddingTop="15.0dip" 
+        >
+
+        <TextView 
+                android:id="@+id/tv_choose_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#FF000000"
+                android:text="请输入接入点地址："/> 
+        <EditText
+            android:id="@+id/edt_choose_server"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_below="@+id/tv_choose_server"
+            android:layout_marginTop="10dip"
+            android:hint="如 192.168.100.86:8080" 
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:maxLength="32"/>
+ 
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_choose_server_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_ok"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16dip" />
+
+</LinearLayout>
