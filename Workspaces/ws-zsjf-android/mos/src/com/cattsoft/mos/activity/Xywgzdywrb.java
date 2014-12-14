@@ -21,38 +21,36 @@ import com.cattsoft.mos.util.ActivityUtil;
 import com.cattsoft.mos.util.DateUtil;
 
 /**
- * 网格重点业务日报
+ * 校园日报-校园网格重点业务日报
  * 
  * @author xieyunchao
  * 
  */
-public class WgZdywrb extends BasicActivity {
+public class Xywgzdywrb extends BasicActivity {
 	private List respdata = new ArrayList();
 	private SimpleAdapter simpleAdapter = null;
 	private ListView lv = null;
 	String response = "";
 	private String flag = "1";
 
-	private Button btn1, btn2,btn3,btn4,btn5,btn6,btn7;
+	private Button btn1, btn2,btn3,btn4,btn5,btn6;
 
-	private String[] key1 = { "wgMc", "pt2gRfz", "pt2gDylj", "pt2gSytqlj",
+	private String[] key1 = { "wgMc", "pt2gRfz", "pt2gDylj", "pt2gSytq",
 			"pt2gZzs" };
-	private String[] key2 = { "wgMc", "pt3gRfz", "pt3gDylj", "pt3gSytqlj",
-			"pt3gZzs" };
-	private String[] key3 = { "wgMc", "ocs3gRfz", "ocs3gDylj", "ocs3gSytqlj",
-	"ocs3gZzs" };
-	private String[] key4 = { "wgMc", "g2g3rfz", "g2g3dylj", "g2g3sytq",
-	"g2g3zzs" };
-	private String[] key5 = { "wgMc", "g4rfz", "g4dylj", "g4sytqlj",
-	"g4zzs"};
-	private String[] key6 = { "wgMc", "kdRfz", "kdDylj", "kdSytqlj",
-	"kdZzs"};
-	private String[] key7 = { "wgMc", "kdcRfz", "kdcDylj", "kdcSytqlj",
-	"kdcZzs"};
+	private String[] key2 = { "wgMc", "ocs2gRxs", "ocs2gRjh", "ocs2gDyljsx",
+			"ocs2gSyljjh" };
+	private String[] key3 = { "wgMc", "pt3gRfz", "pt3gDylj", "pt3gSytq",
+	"pt3gZzs" };
+	
+	private String[] key4 = { "wgMc", "pt4gRfz", "pt4gDgyl", "pt4gSytq",
+	"pt4gZzs" };
+	private String[] key5 = { "wgMc", "ocs3gRfz", "ocs3gDylj", "ocs3gSytq",
+	"ocs3gZzs"};
+	private String[] key6 = { "wgMc", "rh2g3gRfz", "rh2g3gDylj", "rh2g3gSytq",
+	"rh2g3gZzs"};
 
 
-
-	private LinearLayout ll1;
+	private LinearLayout ll1,ll2;
 	private DatePickerDialog datePickerDialog;
 	private String dateFlag="0";//sdk bug防止重复执行
 	
@@ -61,9 +59,9 @@ public class WgZdywrb extends BasicActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		this.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.wgzdywrb); 
+		setContentView(R.layout.xywgzdywrb); 
 	 
-		super.setTitleBarWrap("网格重点业务日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
+		super.setTitleBarWrap("校园网格重点业务日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
 				View.INVISIBLE, false);
 		
 		this.setTitleRightButtonImg(R.drawable.date_choose);
@@ -106,42 +104,36 @@ public class WgZdywrb extends BasicActivity {
 				json.getJSONArray("list").toJSONString(),
 				java.util.HashMap.class);
 		if(flag.equals("1")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line5, key1, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("2")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line5, key2, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("3")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line5, key3, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("4")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line5, key4, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("5")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line7, key5, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5,R.id.tv_data6,R.id.tv_data7 });
 		}else if(flag.equals("6")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 					R.layout.list_item_line7, key6, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5});
-		}else if(flag.equals("7")) {
-			simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
-					R.layout.list_item_line7, key7, new int[] { R.id.tv_data1,
-							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
-							R.id.tv_data5});
 		}
-		
 		
 		lv.setAdapter(simpleAdapter);
 	}
@@ -150,7 +142,7 @@ public class WgZdywrb extends BasicActivity {
 		Thread mThread = new Thread(new Runnable() {// 启动新的线程，
 					@Override
 					public void run() {
-						response = getPostHttpContent("", "tm/ZSJFAction.do?method=hsrb4zdywlz",
+						response = getPostHttpContent("", "tm/ZSJFAction.do?method=xyrb4xywgzdywrb",
 								reqJson.toJSONString());
 						if (handleError(response) == true)
 							return;
@@ -167,48 +159,54 @@ public class WgZdywrb extends BasicActivity {
 		public void onClick(View arg0) {
 			Button btn = (Button) arg0;
 			if (btn == btn1) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key1, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
 				flag="1";
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
 			} else if (btn == btn2) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key2, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
 				flag="2";
+				ll2.setVisibility(View.VISIBLE);
+				ll1.setVisibility(View.GONE);
 			} else if (btn == btn3) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key3, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
 				flag="3";
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
 			} else if (btn == btn4) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key4, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
 				flag="4";
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
 			} else if (btn == btn5) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key5, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5,R.id.tv_data6,R.id.tv_data7 });
 				flag="5";
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
 			} else if (btn == btn6) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
 						R.layout.list_item_line5, key6, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 ,R.id.tv_data6,R.id.tv_data7});
 				flag="6";
-			}  else if (btn == btn7) {
-				simpleAdapter = new SimpleAdapter(WgZdywrb.this, respdata,
-						R.layout.list_item_line5, key7, new int[] {
-								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
-								R.id.tv_data4, R.id.tv_data5 ,R.id.tv_data6,R.id.tv_data7});
-				flag="7";
-			}
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
+			}  
 			switchCurrent(btn);
 			lv.setAdapter(simpleAdapter);
 		}
@@ -218,7 +216,9 @@ public class WgZdywrb extends BasicActivity {
 	@Override
 	protected void initView() {
 		ll1 = (LinearLayout) findViewById(R.id.tab_head_ll_1);
+		ll2 = (LinearLayout) findViewById(R.id.tab_head_ll_2);
 		ll1.setVisibility(View.VISIBLE);
+		ll2.setVisibility(View.GONE);
 		lv = (ListView) findViewById(R.id.alist);
 		btn1 = (Button) findViewById(R.id.btn1);
 		btn2 = (Button) findViewById(R.id.btn2);
@@ -226,7 +226,6 @@ public class WgZdywrb extends BasicActivity {
 		btn4 = (Button) findViewById(R.id.btn4);
 		btn5 = (Button) findViewById(R.id.btn5);
 		btn6 = (Button) findViewById(R.id.btn6);
-		btn7 = (Button) findViewById(R.id.btn7);
 		btn1.setTextColor(0xFFF38121);
 	}
 
@@ -239,7 +238,6 @@ public class WgZdywrb extends BasicActivity {
 		btn4.setOnClickListener(listener);
 		btn5.setOnClickListener(listener);
 		btn6.setOnClickListener(listener);
-		btn7.setOnClickListener(listener);
 	}
 
 	
@@ -247,7 +245,7 @@ public class WgZdywrb extends BasicActivity {
 	public void rightButtonOnClick() {
 		this.getTitleRightButton().setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				datePickerDialog=new DatePickerDialog(WgZdywrb.this,
+				datePickerDialog=new DatePickerDialog(Xywgzdywrb.this,
 						myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
 						datePickerDialog.show();
 			}
@@ -261,9 +259,15 @@ public class WgZdywrb extends BasicActivity {
 			if(dateFlag.equals("0")) {
 				int amonth=monthOfYear+1;
 				String strMonth=amonth>=10?amonth+"":"0"+amonth;
-				reqJson.put("date", year+"-"+strMonth+"-"+dayOfMonth);
+				String strdayOfMonth=dayOfMonth+"";
+				if(dayOfMonth<10){
+				 strdayOfMonth="0"+strdayOfMonth;
+				}
+				reqJson.put("date", year+"-"+strMonth+"-"+strdayOfMonth);
 				showProcessDialog(true);
 				requestData();
+			setTitleBarWrap("校园网格重点业务日报",year+"-"+strMonth+"-"+strdayOfMonth, View.VISIBLE, View.VISIBLE,
+						View.INVISIBLE, false);
 				dateFlag="1";
 			}
 			

@@ -256,31 +256,7 @@
             </intent-filter>
         </activity>
         
-        <activity
-            android:name=".activity.LicaiQueryActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".activity.LicaiQueryResultActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".activity.LicaiToolsActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".activity.LIcaiTools4Cunkuan"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".activity.LicaiDetailActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-         <activity
-            android:name=".activity.WineListActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        
+         
         <activity
             android:name=".activity.ProcDetailActivity"
             android:screenOrientation="portrait" >
@@ -391,7 +367,10 @@
             android:name=".activity.ReportDesc"
             android:screenOrientation="portrait" >
         </activity>
-        
+         <activity
+            android:name=".activity.Xywgzdywrb"
+            android:screenOrientation="portrait" >
+        </activity>
         
         
         <activity

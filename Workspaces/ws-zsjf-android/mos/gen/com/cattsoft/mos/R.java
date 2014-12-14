@@ -1164,9 +1164,10 @@ public final class R {
         public static final int wgzdywrb=0x7f03006c;
         public static final int wine_filter=0x7f03006d;
         public static final int work_order_handle_toolbar_item=0x7f03006e;
-        public static final int zdywrb4khq=0x7f03006f;
-        public static final int zixun_detail=0x7f030070;
-        public static final int zsjfhelp=0x7f030071;
+        public static final int xywgzdywrb=0x7f03006f;
+        public static final int zdywrb4khq=0x7f030070;
+        public static final int zixun_detail=0x7f030071;
+        public static final int zsjfhelp=0x7f030072;
     }
     public static final class menu {
         public static final int activity_main=0x7f0c0000;
