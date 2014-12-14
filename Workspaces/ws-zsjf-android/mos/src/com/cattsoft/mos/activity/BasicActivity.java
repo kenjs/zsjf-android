@@ -78,7 +78,7 @@ public abstract class BasicActivity extends Activity {
 	public  CacheProcess cache;
 	private String encryptUsable;
 	private SharedPreferences sharedPreferences;
-	private  TextView  titleWrapText;
+	TextView  titleWrapText;
 	
 	int thisYear;
 	int thisMonth;

@@ -21,12 +21,12 @@ import com.cattsoft.mos.util.ActivityUtil;
 import com.cattsoft.mos.util.DateUtil;
 
 /**
- * 校园日报-校园网格重点业务日报
+ * 日通报-渠道客户经理日报
  * 
  * @author xieyunchao
  * 
  */
-public class Xywgzdywrb extends BasicActivity {
+public class Qdkhjlrb extends BasicActivity {
 	private List respdata = new ArrayList();
 	private SimpleAdapter simpleAdapter = null;
 	private ListView lv = null;
@@ -59,9 +59,9 @@ public class Xywgzdywrb extends BasicActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		this.requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.xywgzdywrb); 
+		setContentView(R.layout.qdkhjlrb); 
 	 
-		super.setTitleBarWrap("校园网格重点业务日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
+		super.setTitleBarWrap("渠道客户经理日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
 				View.INVISIBLE, false);
 		
 		this.setTitleRightButtonImg(R.drawable.date_choose);
@@ -104,32 +104,32 @@ public class Xywgzdywrb extends BasicActivity {
 				json.getJSONArray("list").toJSONString(),
 				java.util.HashMap.class);
 		if(flag.equals("1")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line5, key1, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("2")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line5, key2, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("3")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line5, key3, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("4")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line5, key4, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("5")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line7, key5, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5,R.id.tv_data6,R.id.tv_data7 });
 		}else if(flag.equals("6")) {
-			simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 					R.layout.list_item_line7, key6, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5});
@@ -142,7 +142,7 @@ public class Xywgzdywrb extends BasicActivity {
 		Thread mThread = new Thread(new Runnable() {// 启动新的线程，
 					@Override
 					public void run() {
-						response = getPostHttpContent("", "tm/ZSJFAction.do?method=xyrb4xywgzdywrb",
+						response = getPostHttpContent("", "tm/ZSJFAction.do?method=rtb4qdkhjlrb",
 								reqJson.toJSONString());
 						if (handleError(response) == true)
 							return;
@@ -159,7 +159,7 @@ public class Xywgzdywrb extends BasicActivity {
 		public void onClick(View arg0) {
 			Button btn = (Button) arg0;
 			if (btn == btn1) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key1, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
@@ -167,7 +167,7 @@ public class Xywgzdywrb extends BasicActivity {
 				ll1.setVisibility(View.VISIBLE);
 				ll2.setVisibility(View.GONE);
 			} else if (btn == btn2) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key2, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
@@ -175,7 +175,7 @@ public class Xywgzdywrb extends BasicActivity {
 				ll2.setVisibility(View.VISIBLE);
 				ll1.setVisibility(View.GONE);
 			} else if (btn == btn3) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key3, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
@@ -183,7 +183,7 @@ public class Xywgzdywrb extends BasicActivity {
 				ll1.setVisibility(View.VISIBLE);
 				ll2.setVisibility(View.GONE);
 			} else if (btn == btn4) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key4, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 });
@@ -191,7 +191,7 @@ public class Xywgzdywrb extends BasicActivity {
 				ll1.setVisibility(View.VISIBLE);
 				ll2.setVisibility(View.GONE);
 			} else if (btn == btn5) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key5, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5,R.id.tv_data6,R.id.tv_data7 });
@@ -199,7 +199,7 @@ public class Xywgzdywrb extends BasicActivity {
 				ll1.setVisibility(View.VISIBLE);
 				ll2.setVisibility(View.GONE);
 			} else if (btn == btn6) {
-				simpleAdapter = new SimpleAdapter(Xywgzdywrb.this, respdata,
+				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
 						R.layout.list_item_line5, key6, new int[] {
 								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
 								R.id.tv_data4, R.id.tv_data5 ,R.id.tv_data6,R.id.tv_data7});
@@ -245,7 +245,7 @@ public class Xywgzdywrb extends BasicActivity {
 	public void rightButtonOnClick() {
 		this.getTitleRightButton().setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				datePickerDialog=new DatePickerDialog(Xywgzdywrb.this,
+				datePickerDialog=new DatePickerDialog(Qdkhjlrb.this,
 						myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
 						datePickerDialog.show();
 			}
