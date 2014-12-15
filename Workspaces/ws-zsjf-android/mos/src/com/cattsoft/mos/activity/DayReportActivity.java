@@ -254,6 +254,9 @@ public class DayReportActivity extends BasicActivity{
 				}else if(reportName.equals("渠道客户经理日报")){
 					startActivity(new Intent(DayReportActivity.this,
 							Qdkhjlrb.class));
+				}else if(reportName.equals("商企网格重点业务日报")){
+					startActivity(new Intent(DayReportActivity.this,
+							Sqwgzdywrb.class));
 				}
 				return false;
 			}

@@ -375,6 +375,11 @@
             android:name=".activity.Qdkhjlrb"
             android:screenOrientation="portrait" >
         </activity>
+          <activity
+            android:name=".activity.Sqwgzdywrb"
+            android:screenOrientation="portrait" >
+        </activity>
+         
          
         
         
