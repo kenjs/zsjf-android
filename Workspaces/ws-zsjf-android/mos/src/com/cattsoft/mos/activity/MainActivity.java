@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.cattsoft.mos.R;
 import com.cattsoft.mos.dataprocess.CacheProcess;
 import com.cattsoft.mos.util.ActivityUtil;
+import com.cattsoft.mos.util.StringUtil;
 
 public class MainActivity extends BasicActivity{
 
@@ -27,6 +28,7 @@ public class MainActivity extends BasicActivity{
 	private Button home_gcjs=null;
 	private Button home_help=null;
 	private long mExitTime = 0l;
+	private String noticeResult="";
 	
 	private UpdateManager manager = new UpdateManager(MainActivity.this);
 	
@@ -39,6 +41,7 @@ public class MainActivity extends BasicActivity{
 		super.setTitleBar("掌上通报",View.GONE,View.GONE,View.INVISIBLE,false);
 		checkThread.start();
 		registerListener();
+		requesNotice();
 	}
 	
 	@Override
@@ -68,6 +71,22 @@ public class MainActivity extends BasicActivity{
 				}
 			});
 	
+	public void requesNotice() {
+		Thread mThread = new Thread(new Runnable() {// 启动新的线程，
+					@Override
+					public void run() {
+						String subUrl = "tm/ZSJFAction.do?method=showNotice";
+						noticeResult = getPostHttpContent("", subUrl,
+								"{}");
+						if (handleError(noticeResult) == true)
+							return;
+						Message m = new Message();
+						m.what = 8;
+						handler.sendMessage(m);
+					}
+				});
+		mThread.start();
+	}
 	
 	// 用于接收线程发送的消息
 	private Handler handler = new Handler() {
@@ -76,6 +95,9 @@ public class MainActivity extends BasicActivity{
 			switch (msg.what) {
 		  
 			case 3: {
+				showUpdateDialog();
+			}
+			case 8:{
 				showNoticeDialog();
 			}
 				break;
@@ -86,9 +108,35 @@ public class MainActivity extends BasicActivity{
 	
 	
 	/**
-	 * 显示软件更新对话框
+	 * 显示通知对话框
 	 */
 	private void showNoticeDialog() {
+		com.alibaba.fastjson.JSONObject j=com.alibaba.fastjson.JSONObject.parseObject(noticeResult);
+		String noticeId=j.getString("noticeId");
+		if(StringUtil.isBlank(noticeId))return ;
+		// 构造对话框
+		AlertDialog.Builder builder = new AlertDialog.Builder(
+				MainActivity.this);
+		builder.setTitle(j.getString("title"));
+		builder.setMessage(j.getString("content"));
+		builder.setNegativeButton("我知道了",
+				new OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+		builder.setOnKeyListener(keylistener);
+		Dialog noticeDialog = builder.create();
+		noticeDialog.setCanceledOnTouchOutside(false);
+		noticeDialog.show();
+	}
+
+	
+	
+	/**
+	 * 显示软件更新对话框
+	 */
+	private void showUpdateDialog() {
 		// 构造对话框
 		AlertDialog.Builder builder = new AlertDialog.Builder(
 				MainActivity.this);
