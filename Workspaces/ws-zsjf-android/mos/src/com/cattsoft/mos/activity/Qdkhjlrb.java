@@ -1,10 +1,15 @@
 package com.cattsoft.mos.activity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.DatePickerDialog.OnDateSetListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,6 +22,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import com.cattsoft.mos.R;
+import com.cattsoft.mos.dialog.ActionSheet;
+import com.cattsoft.mos.dialog.SelectDialog;
+import com.cattsoft.mos.dialog.ActionSheet.OnActionSheetSelected;
 import com.cattsoft.mos.util.ActivityUtil;
 import com.cattsoft.mos.util.DateUtil;
 
@@ -26,14 +34,17 @@ import com.cattsoft.mos.util.DateUtil;
  * @author xieyunchao
  * 
  */
-public class Qdkhjlrb extends BasicActivity {
+public class Qdkhjlrb extends BasicActivity  implements OnActionSheetSelected, OnCancelListener{
 	private List respdata = new ArrayList();
 	private SimpleAdapter simpleAdapter = null;
 	private ListView lv = null;
 	String response = "";
 	private String flag = "1";
+	private String showwgFlag="any";
+	private List areadata=new ArrayList();
+	private Map areaMap=new HashMap();
 
-	private Button btn1, btn2,btn3,btn4,btn5,btn6;
+	private Button btn1, btn2,btn3,btn4,btn5;
 
 	private String[] key1 = { "wgMc", "pt2gRfz", "pt2gDylj", "pt2gSytq",
 			"pt2gZzs" };
@@ -41,13 +52,11 @@ public class Qdkhjlrb extends BasicActivity {
 			"ocs2gSyljjh" };
 	private String[] key3 = { "wgMc", "pt3gRfz", "pt3gDylj", "pt3gSytq",
 	"pt3gZzs" };
-	
-	private String[] key4 = { "wgMc", "pt4gRfz", "pt4gDgyl", "pt4gSytq",
-	"pt4gZzs" };
-	private String[] key5 = { "wgMc", "ocs3gRfz", "ocs3gDylj", "ocs3gSytq",
+	private String[] key4 = { "wgMc", "ocs3gRfz", "ocs3gDylj", "ocs3gSytq",
 	"ocs3gZzs"};
-	private String[] key6 = { "wgMc", "rh2g3gRfz", "rh2g3gDylj", "rh2g3gSytq",
-	"rh2g3gZzs"};
+	
+	private String[] key5 = { "wgMc", "pt4gRfz", "pt4gDgyl", "pt4gSytq",
+	"pt4gZzs" };
 
 
 	private LinearLayout ll1,ll2;
@@ -64,7 +73,7 @@ public class Qdkhjlrb extends BasicActivity {
 		super.setTitleBarWrap("渠道客户经理日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
 				View.INVISIBLE, false);
 		
-		this.setTitleRightButtonImg(R.drawable.date_choose);
+		this.setTitleRightButtonImg(R.drawable.toolbar_filter);
 		initData();
 		initView();
 		registerListener();
@@ -78,6 +87,7 @@ public class Qdkhjlrb extends BasicActivity {
 		initCalendar();
 		reqJson = new com.alibaba.fastjson.JSONObject();
 		reqJson.put("date", DateUtil.getYesterdayStr());
+		reqJson.put("showwgFlag", showwgFlag);
 	}
 
 	private Handler handler = new Handler() {
@@ -93,6 +103,7 @@ public class Qdkhjlrb extends BasicActivity {
 				if (mProgressDialog != null)
 					mProgressDialog.dismiss();// 当接到消息时，关闭进度条
 				dateFlag="0";
+				showwgFlag="";
 			}
 		}
 	};
@@ -103,24 +114,38 @@ public class Qdkhjlrb extends BasicActivity {
 		respdata = com.alibaba.fastjson.JSON.parseArray(
 				json.getJSONArray("list").toJSONString(),
 				java.util.HashMap.class);
+		if(areadata.size()==0) {
+			List tempList=com.alibaba.fastjson.JSON.parseArray(
+					json.getJSONArray("wglist").toJSONString(),
+					java.util.HashMap.class);
+			for(int i=0;i<tempList.size();i++) {
+				Map m=(java.util.HashMap)tempList.get(i);
+				String diqu=(String)m.get("diqu");
+				Map newhm=new HashMap();
+				newhm.put("name", diqu);
+				newhm.put("value", diqu);
+				areadata.add(newhm);
+			}
+		}
+		
 		if(flag.equals("1")) {
 			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-					R.layout.list_item_line5, key1, new int[] { R.id.tv_data1,
+					R.layout.list_item_line7, key1, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("2")) {
 			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-					R.layout.list_item_line5, key2, new int[] { R.id.tv_data1,
+					R.layout.list_item_line7, key2, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("3")) {
 			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-					R.layout.list_item_line5, key3, new int[] { R.id.tv_data1,
+					R.layout.list_item_line7, key3, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("4")) {
 			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-					R.layout.list_item_line5, key4, new int[] { R.id.tv_data1,
+					R.layout.list_item_line7, key4, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5 });
 		}else if(flag.equals("5")) {
@@ -128,11 +153,6 @@ public class Qdkhjlrb extends BasicActivity {
 					R.layout.list_item_line7, key5, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5,R.id.tv_data6,R.id.tv_data7 });
-		}else if(flag.equals("6")) {
-			simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-					R.layout.list_item_line7, key6, new int[] { R.id.tv_data1,
-							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
-							R.id.tv_data5});
 		}
 		
 		lv.setAdapter(simpleAdapter);
@@ -198,15 +218,7 @@ public class Qdkhjlrb extends BasicActivity {
 				flag="5";
 				ll1.setVisibility(View.VISIBLE);
 				ll2.setVisibility(View.GONE);
-			} else if (btn == btn6) {
-				simpleAdapter = new SimpleAdapter(Qdkhjlrb.this, respdata,
-						R.layout.list_item_line5, key6, new int[] {
-								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
-								R.id.tv_data4, R.id.tv_data5 ,R.id.tv_data6,R.id.tv_data7});
-				flag="6";
-				ll1.setVisibility(View.VISIBLE);
-				ll2.setVisibility(View.GONE);
-			}  
+			} 
 			switchCurrent(btn);
 			lv.setAdapter(simpleAdapter);
 		}
@@ -225,7 +237,6 @@ public class Qdkhjlrb extends BasicActivity {
 		btn3 = (Button) findViewById(R.id.btn3);
 		btn4 = (Button) findViewById(R.id.btn4);
 		btn5 = (Button) findViewById(R.id.btn5);
-		btn6 = (Button) findViewById(R.id.btn6);
 		btn1.setTextColor(0xFFF38121);
 	}
 
@@ -237,20 +248,36 @@ public class Qdkhjlrb extends BasicActivity {
 		btn3.setOnClickListener(listener);
 		btn4.setOnClickListener(listener);
 		btn5.setOnClickListener(listener);
-		btn6.setOnClickListener(listener);
 	}
 
-	
 	@Override
 	public void rightButtonOnClick() {
 		this.getTitleRightButton().setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				datePickerDialog=new DatePickerDialog(Qdkhjlrb.this,
-						myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
-						datePickerDialog.show();
+				ActionSheet.showSheet(Qdkhjlrb.this, Qdkhjlrb.this, Qdkhjlrb.this,"","");
+				
+				
+//				datePickerDialog=new DatePickerDialog(G3ywrb.this,
+//						myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
+//						datePickerDialog.show();
 			}
 		});
 	}
+	
+//	@Override
+//	public void rightButtonOnClick() {
+//		this.getTitleRightButton().setOnClickListener(new OnClickListener() {
+//			public void onClick(View v) {
+//				
+//				
+//				datePickerDialog=new DatePickerDialog(Qdkhjlrb.this,
+//						myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
+//						datePickerDialog.show();
+//			}
+//		});
+//	}
+//	
+	
 	
 	private OnDateSetListener myDateSetListener=new OnDateSetListener(){
 		@Override
@@ -273,5 +300,42 @@ public class Qdkhjlrb extends BasicActivity {
 			
 			}
 		};
+		
+		@Override
+		public void onCancel(DialogInterface arg0) {
+			
+		}
+
+		@Override
+		public void onClick(int whichButton) {
+
+			// TODO Auto-generated method stub
+			switch (whichButton) {
+				case 0:
+					Dialog dialog = new SelectDialog(Qdkhjlrb.this, R.style.selectDialog,"选择网格",areadata,areaMap,new SelectDialog.OnSelectItemgListener() {
+						
+						@Override
+						public void refreshActivity(Map m) {
+//							defect_zerenren1_txt.setText((String)m.get("name"));
+							areaMap=m;
+							reqJson.put("diqu", ((String)m.get("name")));
+							showProcessDialog(true);
+							requestData();
+						}
+					});
+					 dialog.show();
+					break;
+				case 1:
+					datePickerDialog=new DatePickerDialog(Qdkhjlrb.this,
+							myDateSetListener, DateUtil.getYesterdayYear(), DateUtil.getYesterdayMonth()-1, DateUtil.getYesterdayDay());
+							datePickerDialog.show();
+					break;
+
+				default:
+					break;
+			}
+
+		
+		}
 	
 }

@@ -20,7 +20,7 @@
             android:layout_marginLeft="2dip"
             android:layout_marginRight="2dip"
             android:layout_marginTop="3dip"
-            android:background="@drawable/bg_tab_head6"
+            android:background="@drawable/bg_tab_head5"
             android:orientation="horizontal" >
 
             <Button
@@ -46,14 +46,15 @@
                 android:layout_gravity="center"
                 android:background="@drawable/title_blank"
                 android:text="3G" />
-
-            <Button
+            
+             <Button
                 android:id="@+id/btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
                 android:background="@drawable/title_blank"
-                android:text="4G" />
+                android:text="OCS3G" />
+            
 
             <Button
                 android:id="@+id/btn5"
@@ -61,15 +62,7 @@
                 android:layout_height="fill_parent"
                 android:layout_gravity="center"
                 android:background="@drawable/title_blank"
-                android:text="OCS3G" />
-
-            <Button
-                android:id="@+id/btn6"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/title_blank"
-                android:text="2G3G" />
+                android:text="4G" />
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -98,11 +91,33 @@
                 android:background="#FFF3812a"
                 android:gravity="center"
                 android:lines="2"
-                android:text="网格名称"
+                android:text="网格"
                 android:textColor="#FFFFFFFF" />
-
             <TextView
                 android:id="@+id/tv_head12"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginRight="1dip"
+                android:layout_marginTop="-7dip"
+                android:layout_weight="1"
+                android:background="#FFF3812a"
+                android:gravity="center"
+                android:text="客户经理"
+                android:textColor="#FFFFFFFF" />
+			<TextView
+                android:id="@+id/tv_head13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dip"
+                android:layout_weight="1"
+                android:background="#FFF3812a"
+                android:gravity="center"
+                android:lines="2"
+                android:text="网点"
+                android:textColor="#FFFFFFFF" />
+            
+            <TextView
+                android:id="@+id/tv_head14"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="1dip"
@@ -114,19 +129,19 @@
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head13"
+                android:id="@+id/tv_head15"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dip"
                 android:layout_marginRight="1dip"
+                android:layout_marginTop="-7dip"
                 android:layout_weight="1"
                 android:background="#FFF3812a"
                 android:gravity="center"
-                android:lines="2"
                 android:text="当月累计"
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head14"
+                android:id="@+id/tv_head16"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_marginRight="1dip"
@@ -138,7 +153,7 @@
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head15"
+                android:id="@+id/tv_head17"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -640,7 +640,7 @@ public final class R {
         public static final int btn3=0x7f0d00c1;
         public static final int btn4=0x7f0d00d9;
         public static final int btn5=0x7f0d00da;
-        public static final int btn6=0x7f0d015c;
+        public static final int btn6=0x7f0d015f;
         public static final int btn7=0x7f0d0188;
         public static final int btnRecord=0x7f0d0170;
         public static final int btnStop=0x7f0d0171;
@@ -968,9 +968,9 @@ public final class R {
         public static final int tv_head12=0x7f0d00c3;
         public static final int tv_head13=0x7f0d00c4;
         public static final int tv_head14=0x7f0d00c5;
-        public static final int tv_head15=0x7f0d015d;
-        public static final int tv_head16=0x7f0d015e;
-        public static final int tv_head17=0x7f0d015f;
+        public static final int tv_head15=0x7f0d015c;
+        public static final int tv_head16=0x7f0d015d;
+        public static final int tv_head17=0x7f0d015e;
         public static final int tv_head21=0x7f0d00ba;
         public static final int tv_head22=0x7f0d00bb;
         public static final int tv_head23=0x7f0d00bc;

@@ -60,7 +60,7 @@ public class Wdywfzrb extends BasicActivity implements OnActionSheetSelected, On
 		setContentView(R.layout.wdywfzrb);
 
 		// 设置标题栏
-		super.setTitleBarWrap("客户经理揽装日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
+		super.setTitleBarWrap("网点业务发展日报",DateUtil.getYesterdayStr(), View.VISIBLE, View.VISIBLE,
 				View.INVISIBLE, false);
 		
 		this.setTitleRightButtonImg(R.drawable.toolbar_filter);
