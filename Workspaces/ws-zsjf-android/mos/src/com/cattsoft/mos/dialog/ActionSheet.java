@@ -23,6 +23,84 @@ public class ActionSheet {
 
 	private ActionSheet() {
 	}
+	
+	
+	public static Dialog showSheet(Context context, final OnActionSheetSelected actionSheetSelected,
+			OnCancelListener cancelListener,String text1,String text2,String text3) {
+		final Dialog dlg = new Dialog(context, R.style.ActionSheet);
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.actionsheetmore, null);
+		final int cFullFillWidth = 10000;
+		layout.setMinimumWidth(cFullFillWidth);
+
+		TextView mContent = (TextView) layout.findViewById(R.id.action_city);
+		TextView mContent2 = (TextView) layout.findViewById(R.id.action_city2);
+		TextView mDate=(TextView)layout.findViewById(R.id.action_date);
+		if(!StringUtil.isBlank(text1)) {
+			mContent.setText(text1);
+		}
+		
+		if(!StringUtil.isBlank(text2)) {
+			mContent2.setText(text2);
+		}
+		
+		if(!StringUtil.isBlank(text3)) {
+			mDate.setText(text3);
+		}
+		TextView mCancel = (TextView) layout.findViewById(R.id.cancel);
+		
+
+		mContent.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				actionSheetSelected.onClick(0);
+				dlg.dismiss();
+			}
+		});
+		mContent2.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				actionSheetSelected.onClick(1);
+				dlg.dismiss();
+			}
+		});
+
+		mDate.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				actionSheetSelected.onClick(2);
+				dlg.dismiss();
+			}
+		});
+		mCancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				actionSheetSelected.onClick(3);
+				dlg.dismiss();
+			}
+		});
+
+		Window w = dlg.getWindow();
+		WindowManager.LayoutParams lp = w.getAttributes();
+		lp.x = 0;
+		final int cMakeBottom = -1000;
+		lp.y = cMakeBottom;
+		lp.gravity = Gravity.BOTTOM;
+		dlg.onWindowAttributesChanged(lp);
+		dlg.setCanceledOnTouchOutside(false);
+		if (cancelListener != null)
+			dlg.setOnCancelListener(cancelListener);
+
+		dlg.setContentView(layout);
+		dlg.show();
+
+		return dlg;
+	}
+	
 
 	public static Dialog showSheet(Context context, final OnActionSheetSelected actionSheetSelected,
 			OnCancelListener cancelListener,String text1,String text2) {
