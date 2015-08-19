@@ -40,7 +40,7 @@ public class Zdywrb4khq extends BasicActivity {
 	private String flag = "1";
 	private String whickReportFlag="";
 
-	private Button btn1, btn2,btn3,btn4,btn5,btn6;
+	private Button btn1, btn2,btn3,btn4,btn5,btn6,btn7;
 
 	private String[] key1 = { "zdywQy", "zdyw2grfz", "zdyw2gylj", "zdyw2gsytqlj",
 			"zdyw2gzzs" };
@@ -54,6 +54,9 @@ public class Zdywrb4khq extends BasicActivity {
 	"zdywKdzzs","zdywKdqnljfz","zdywKdjnljfz" };
 	private String[] key6 = { "zdywQy", "zdywKdcjrcj", "zdywKdcjdylj", "zdywKdcjsytqlj",
 	"zdywKdcjzzs","zdywKdcjqnljs","zdywKdcjjnljs" };
+	
+	private String[] key7 = { "zdywQy", "zhwjrfz", "zhwjdylj", "zhwjsytq",
+			"zhwjzzs"};
 
 	private long mExitTime = 0l;
 
@@ -177,6 +180,11 @@ public class Zdywrb4khq extends BasicActivity {
 					R.layout.list_item_line7, key6, new int[] { R.id.tv_data1,
 							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
 							R.id.tv_data5, R.id.tv_data6,R.id.tv_data7});
+		}else if(flag.equals("7")) {
+			simpleAdapter = new SimpleAdapter(Zdywrb4khq.this, respdata,
+					R.layout.list_item_line5, key7, new int[] { R.id.tv_data1,
+							R.id.tv_data2, R.id.tv_data3, R.id.tv_data4,
+							R.id.tv_data5});
 		}
 		
 		lv.setAdapter(simpleAdapter);
@@ -256,6 +264,15 @@ public class Zdywrb4khq extends BasicActivity {
 				ll2.setVisibility(View.GONE);
 				ll3.setVisibility(View.VISIBLE);
 				flag="6";
+			}  else if (btn == btn7) {
+				simpleAdapter = new SimpleAdapter(Zdywrb4khq.this, respdata,
+						R.layout.list_item_line5, key7, new int[] {
+								R.id.tv_data1, R.id.tv_data2, R.id.tv_data3,
+								R.id.tv_data4, R.id.tv_data5 });
+				ll1.setVisibility(View.VISIBLE);
+				ll2.setVisibility(View.GONE);
+				ll3.setVisibility(View.GONE);
+				flag="7";
 			} 
 			switchCurrent(btn);
 			lv.setAdapter(simpleAdapter);
@@ -276,6 +293,7 @@ public class Zdywrb4khq extends BasicActivity {
 		btn4 = (Button) findViewById(R.id.btn4);
 		btn5 = (Button) findViewById(R.id.btn5);
 		btn6 = (Button) findViewById(R.id.btn6);
+		btn7=(Button) findViewById(R.id.btn7);
 		btn1.setTextColor(0xFFF38121);
 	}
 
@@ -288,6 +306,7 @@ public class Zdywrb4khq extends BasicActivity {
 		btn4.setOnClickListener(listener);
 		btn5.setOnClickListener(listener);
 		btn6.setOnClickListener(listener);
+		btn7.setOnClickListener(listener);
 	}
 
 	

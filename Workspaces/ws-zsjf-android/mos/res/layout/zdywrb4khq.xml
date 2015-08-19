@@ -20,7 +20,7 @@
             android:layout_marginLeft="2dip"
             android:layout_marginRight="2dip"
             android:layout_marginTop="3dip"
-            android:background="@drawable/bg_tab_head6"
+            android:background="@drawable/bg_tab_head7"
             android:orientation="horizontal" >
 
             <Button
@@ -70,6 +70,15 @@
                 android:layout_gravity="center"
                 android:background="@drawable/title_blank"
                 android:text="宽带拆机\n日报" />
+            
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/title_blank"
+                android:text="智慧沃\n家庭" />
+            
         </LinearLayout>
     </HorizontalScrollView>
 
