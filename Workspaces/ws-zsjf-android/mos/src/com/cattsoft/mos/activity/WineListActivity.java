@@ -225,8 +225,8 @@ public class WineListActivity extends BasicActivity {
 					
 					@Override
 					public void refreshActivity(Map m) {
-						startActivity(new Intent(WineListActivity.this,
-								OrderDetailActivity.class));
+						//startActivity(new Intent(WineListActivity.this,
+							//	OrderDetailActivity.class));
 					}
 				});
 				 dialog.show();

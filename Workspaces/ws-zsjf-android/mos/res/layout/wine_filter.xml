@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:textSize="14dip" />
     <TextView
-            android:id="@+id/country1"
+            android:id="@+id/country1112"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
             android:gravity="left"
@@ -77,7 +77,7 @@
             android:layout_weight="1"
             android:textSize="14dip" />
     <TextView
-            android:id="@+id/country1"
+            android:id="@+id/country11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
             android:gravity="left"
@@ -93,7 +93,7 @@
             android:layout_weight="1"
             android:textSize="14dip" />
     <TextView
-            android:id="@+id/country1"
+            android:id="@+id/country111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
             android:gravity="left"

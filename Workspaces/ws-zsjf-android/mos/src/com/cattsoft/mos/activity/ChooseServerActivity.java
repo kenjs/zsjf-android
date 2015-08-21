@@ -108,15 +108,15 @@ public class ChooseServerActivity extends BasicActivity {
 					editor.putString("serverURL", edt_serverName.getText().toString());
 					editor.commit();
 				if(StringUtil.isBlank(fromFlag)) {
-					startActivity(new Intent(ChooseServerActivity.this, HomeMainActivity.class));
+					//startActivity(new Intent(ChooseServerActivity.this, HomeMainActivity.class));
 					finish();
 				}else {
-					Toast.makeText(ChooseServerActivity.this, "修改成功！",Toast.LENGTH_SHORT).show();
+					//Toast.makeText(ChooseServerActivity.this, "修改成功！",Toast.LENGTH_SHORT).show();
 					finish();
 				}
 				
 			}else {
-				startActivity(new Intent(ChooseServerActivity.this, HomeMainActivity.class));
+				//startActivity(new Intent(ChooseServerActivity.this, HomeMainActivity.class));
 				//Toast.makeText(ChooseServerActivity.this, "接入点异常，请确认您输入的接入点是否正确！",Toast.LENGTH_SHORT).show();
 			}
 		}

@@ -3,8 +3,7 @@ package com.cattsoft.mos.pub;
 public class Constant {
 
 	
-	//public static String ServerURL = "http://60.31.254.52:8080/web_mos/";
-	public static String ServerURL = "http://192.168.1.108:8080/web_mos/";
+	//public static String ServerURL = "http://192.168.1.108:8080/web_mos/";
 
 	public static String file_upload_URL = "192.168.1.106:8080";
 	public final static String messageQueenAddr = "192.168.1.111";

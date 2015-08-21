@@ -157,7 +157,7 @@
             android:visibility="gone" >
 
             <TextView
-                android:id="@+id/tv_head11"
+                android:id="@+id/tv_head111"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="1dip"
@@ -169,7 +169,7 @@
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head12"
+                android:id="@+id/tv_head122"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="1dip"
@@ -181,7 +181,7 @@
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head13"
+                android:id="@+id/tv_head133"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="1dip"
@@ -193,7 +193,7 @@
                 android:textColor="#FFFFFFFF" />
 
             <TextView
-                android:id="@+id/tv_head14"
+                android:id="@+id/tv_head144"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_marginRight="1dip"
@@ -205,7 +205,7 @@
                 android:textColor="#FFFFFFFF" />
             
             <TextView
-                android:id="@+id/tv_head15"
+                android:id="@+id/tv_head155"
                 android:layout_width="fill_parent"
                 android:layout_height="40dip"
                 android:layout_marginRight="1dip"
